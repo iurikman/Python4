@@ -21,10 +21,10 @@ list1 = [randint(0, 10) for i in range(4)]
 print(list1)
 
 max = 0
-max_index = 0
+mid_index = 0
 for i in range(len(list1)):
     if list1[i] + list1[i-1] + list1[i-2] > max:
         max = list1[i] + list1[i-1] + list1[i-2]
-        max_index = i
-print(max_index)
+        mid_index = i - 1
+print(list1[mid_index - 1], list1[mid_index], list1[mid_index + 1])
 print(max)
